@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+         http://www.springframework.org/schema/aop 
+               http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<context:annotation-config></context:annotation-config>
+	<context:property-placeholder location="classpath:/jdbc.properties" />
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${driverClassName}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop><!--create -->
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hiberante.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<!-- 开启二级缓存 -->
+				<prop key=" hibernate.cache.use_second_level_cache">true</prop>
+				<!-- 启用查询缓存 -->
+				<prop key=" hibernate.cache.use_query_cache">true</prop>
+				<!-- 配置二级缓存提供商 -->
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
+				</prop>
+				<!-- 加载缓存所需配置文件 -->
+				<prop key="hibernate.net.sf.ehcache.configurationResourceName">classpath:ehcache.xml</prop>
+				<prop key="hibernate.jdbc.batch_size">100</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>track.jx.model.TravelNote</value>
+				<value>track.jx.model.Activity</value>
+				<value>track.jx.model.User</value>
+				<value>track.jx.model.Village</value>
+				<value>track.jx.model.ActivitySchedule</value>
+				<value>track.jx.model.ActivityTip</value>
+				<value>track.jx.model.ApplyNotice</value>
+				<value>track.jx.model.CostDetail</value>
+				<value>track.jx.model.SafetyTip</value>
+				<value>track.jx.model.Admin</value>
+				<value>track.jx.model.VillagePraise</value>
+				<value>track.jx.model.Comment</value>
+				<value>track.jx.model.CommentPraise</value>
+				<value>track.jx.model.UserActivity</value>
+				<value>track.jx.model.ActivityPraise</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 前台 -->
+	<bean id="UserDao" class="track.jx.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="UserService" class="track.jx.service.impl.UserServiceImp">
+		<property name="userDao" ref="UserDao"></property>
+	</bean>
+
+	<bean id="VillageDao" class="track.jx.dao.impl.VillageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="VillageService" class="track.jx.service.impl.VillageServiceImp">
+		<property name="villageDao" ref="VillageDao"></property>
+	</bean>
+
+	<bean id="NoteDao" class="track.jx.dao.impl.NoteDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="NoteService" class="track.jx.service.impl.NoteServiceImp">
+		<property name="noteDao" ref="NoteDao"></property>
+	</bean>
+	<bean id="PraiseDao" class="track.jx.dao.impl.PraiseDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="PraiseService" class="track.jx.service.impl.PraiseServiceImp">
+		<property name="praiseDao" ref="PraiseDao"></property>
+	</bean>
+	<!-- 后台 -->
+	<bean id="AdminDao" class="track.jx.dao.impl.AdminDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="AdminService" class="track.jx.service.AdminService">
+		<property name="adminDao" ref="AdminDao"></property>
+	</bean>
+	<bean id="ActivityDao" class="track.jx.dao.impl.ActivityDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="ActivityService" class="track.jx.service.impl.ActivityServiceImp">
+		<property name="activityDao" ref="ActivityDao"></property>
+	</bean>
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<aop:config>
+		<aop:pointcut expression="execution(public * track.jx.dao.impl.*.*(..))"
+			id="activity" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="activity" />
+	</aop:config>
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+</beans>

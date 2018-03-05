@@ -1,0 +1,1546 @@
+
+body{
+	min-width: 750px;
+	text-align:center;
+	margin:0 auto;
+
+}
+/*左边的我要报名快捷按钮nav。。。*/
+.LeftBanner{
+	margin:0;
+	padding:0;
+	width:10%;
+	min-width: 100px;
+	height: 200px;
+	position: relative;
+	float: left;
+	top:200px;
+}
+.LeftBanner a{
+	background-color: #BDE0EC;
+	padding-right:5px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-top:10px;
+	height: 40px;
+	line-height: 30px;
+	width:150px;
+	color:black;
+	background-color: white;
+	position: relative;
+	left:-110px;
+}
+.LeftBanner a span{
+	height: 28px;
+	width:100px;
+	text-align: left;
+
+} 
+.LeftBanner a i{
+	width:32px;
+	color:#BDE0EC;
+	text-align:right;
+	float:right;
+	font-size: 28px;
+
+}
+/*点赞：*/
+.myThumbsUp:hover{
+	line-height: 110px; 	 
+	/*opacity: 0.2;*/
+	width:110px;
+	height:110px;
+	cursor:pointer;
+	-webkit-animation: scaleout 1.3s infinite ease-in-out;
+}
+
+@keyframes scaleout {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    } 100% {
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          opacity: 0;
+      }
+}
+@keyframes ripple {
+	0% {
+		line-height: 90px; 
+		opacity:0.6;
+		width:90px;
+		height:90px;
+	}
+	100% {
+		line-height: 120px; 	 
+		opacity: 0.2;
+		width:120px;
+		height:120px;
+	}
+}
+.myThumbsUp{	
+	text-align: center;
+	margin:0 auto;
+	position: absolute;
+	top:200px;
+	left:83%;
+	color::#333;
+	border:dashed white 1px;
+	background-color:#F5FCFE;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0,0,0,.3) inset;
+	-webkit-animation-name:'ripple';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+	-webkit-animation-duration: 2s;/*动画持续时间*/
+	-webkit-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+	-webkit-animation-delay: 0s;/*动画延迟时间*/
+	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+	-webkit-animation-direction: alternate;/*定义动画方式*/
+}
+.glyphicon-thumbs-up{
+	font-size:20px;
+	position: relative;
+	top:5px;
+	display: inline-block;
+}
+/*菜单栏：*/
+.mainMenu{
+	height:60px;
+	border-bottom:1px solid #BDE0EC;;
+}
+.mainMenu ul{
+	width:90%;
+	height: 60px;
+}
+
+
+.mainMenu li {
+	width:15%;
+	height:60px;
+	display: list-item;
+    float: left;
+    padding: 0 10px;
+    cursor:pointer;
+}
+
+.mainMenu li a:hover{
+    
+    border-bottom: 5px solid #BDE0EC;;
+    color: #5fb9c0;
+}
+.mainMenu li:nth-child(1){
+	margin-left:7.5%;
+}
+.mainMenu ul li a {
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    font-size: 14px;
+    float: left;
+    padding: 0 10%;
+    color: #333;
+    list-style: none;
+    text-decoration: none;/*下划线删除*/
+    
+}
+
+div {
+    display: block;
+}
+
+
+
+#travelNotesPage {
+	display: none;
+}
+#feePage{
+	display: block;
+}
+#arrangementsPage{
+	display: none;
+}
+#noticePage,#attentionPage,#signUpPage {
+	display: none;
+}
+.changeA{
+	border-bottom: 5px solid #BDE0EC;
+    color: #5fb9c0;
+}
+/*以下为非同一样式：——————————————————————————————————————-------------------------————————————*/
+/*1.travelNotes:我的游记----------------------------------------------1.我的游记-------------------------------*/
+#travelNotesPage .contentDiv{
+	width:100%;
+	margin:0 auto;
+	text-align: left;
+}
+#travelNotesPage .content{
+	width:100%;
+	padding:20px 40px 20px 40px;
+}
+#travelNotesPage #ArticleContent{
+	margin-bottom: 20px;
+}
+#travelNotesPage .title{
+	color:#BDE0EC;
+	text-align: center;
+	margin-bottom: 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size:20px;
+} 	
+/*时光旅行：*/
+#travelNotesPage  #TimeTravelContent .title{
+	background: -webkit-linear-gradient(left, #BE93C5 1% , #7BC6CC 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	filter: drop-shadow(0px 1px 2px rgba(0, 0,0, .1));	
+}   
+#travelNotesPage #TimeTravelContent .contentBody{
+	border-radius: 5px;
+	min-height: 350px;
+	text-align: center;
+								/*overflow: auto;*/
+    background: -webkit-linear-gradient(right, #BE93C5, #7BC6CC);
+    background: -o-linear-gradient(right, #BE93C5, #7BC6CC);
+    background: linear-gradient(to left, #BE93C5, #7BC6CC);	
+}
+#travelNotesPage .timeline {
+    position: relative;
+    margin: 30px auto;
+    padding: 60px 0;
+}
+
+/*时间轴的垂直线：*/
+#travelNotesPage .timeline::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 4px;
+    height: 98%;
+    background-color: #8d94b1;
+}
+#travelNotesPage .wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*每个item:*/
+#travelNotesPage .timeline__item-bg {
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    color: #fff;
+}
+#travelNotesPage .timeline__item {
+    margin-bottom: 30px;
+    position: relative;
+}
+#travelNotesPage .timeline__item:nth-child(2n){
+	color:#7BC6CC;
+	/*偶数div为紫色：*/
+}
+#travelNotesPage .timeline__item:nth-child(2n+1){
+	color:#BE93C5;
+	/*偶数div为紫色：*/
+}
+#travelNotesPage .timeline__item:focus,.wrapper:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+/*后横条：*/
+#travelNotesPage .timeline__item::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*每个圆环：*/
+#travelNotesPage .timeline__item__station {
+    background-color: #9aa0b9;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    top: 0;
+    left: 10%;
+    margin-left: -33px;
+    border: 4px solid #8d94b1;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    z-index: 999;
+}
+/*每个item内容：*/
+
+#travelNotesPage .timeline__item__content {
+    width: 80%;
+    background-color: #fff;
+    padding: 20px 60px 20px 30px;
+    border-radius: 6px;
+    float: right;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    position: relative;
+    background-size:100% 100%;
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+/*含背景色的content：*/
+#travelNotesPage .timeline__item-bg:nth-child(2n+1) .timeline__item__station ,
+#travelNotesPage .timeline__item-bg:nth-child(2n+1)  .timeline__item__content{
+    background-color: #65adb7;/*变绿色：*/  
+    color:white;
+}
+#travelNotesPage .timeline__item-bg:nth-child(2n) .timeline__item__station ,
+#travelNotesPage .timeline__item-bg:nth-child(2n) .timeline__item__content{
+    background-color: #BE93C5;/*变紫色*/
+    color:white;
+}
+#travelNotesPage .timeline__item__content:hover{
+
+}
+/*连接的横条：*/
+/*奇数横条：*/
+#travelNotesPage .timeline__item__content::before {
+    content: '';
+    position: absolute;
+    left: -12%;
+    background-color: #8d94b1;
+    top: 20px;
+  	width: 12%;
+    height: 4px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+/*偶数横条：*/
+#travelNotesPage .timeline__item:nth-child(2n) .timeline__item__content::before {
+    left:-12%;
+}
+/*奇数横条变绿色：*/
+#travelNotesPage .timeline__item-bg:nth-child(2n+1) .timeline__item__content::before{
+	background-color: #65adb7;
+}
+/*偶数横条变紫色：*/
+#travelNotesPage .timeline__item-bg:nth-child(2n) .timeline__item__content::before{
+	background-color: #BE93C5;
+}
+#travelNotesPage .timeline__item:nth-child(2n) .timeline__item__content {
+    float: right;
+}
+/*外面的罩：*/
+
+#travelNotesPage .timeline__item__content:hover .coverContent{
+	visibility: visible;
+	filter: alpha(opacity=0);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    color:white;
+}
+
+#travelNotesPage .coverBg{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.3;
+    visibility: hidden;
+ 
+}
+#travelNotesPage .timeline__item__content__title{
+	line-height: 25px;
+	word-break:break-all;
+}
+#travelNotesPage .timeline__item__content__author{
+	margin-right: 30px;
+	word-break:break-all;
+}
+#travelNotesPage .timeline__item__content__description{
+	text-indent: 30px;
+	text-align: left;
+	word-break:break-all;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	overflow: hidden;
+}
+/*标签彩带：*/
+#travelNotesPage .ribbon{
+	position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 9;
+}
+#travelNotesPage .ribbonLable{
+	color: #FFF;
+    transition: color .2s;
+    background-color:rgb(216,0,0); /*红色背景彩带*/
+    width: 100px;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: -24px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/*我要报名按钮：*/
+#travelNotesPage #signUpBtnDiv{
+  margin:0 auto;
+  height: 100px;
+  width:100%;	
+  padding:30px;
+  text-align: center;
+}
+#travelNotesPage #showMoreBtn,#travelNotesPage #signUpBtn{
+	font-size:18px;
+	border-radius:10px;
+	color:white;
+	background-color: #BDE0EC;
+	height:40px;
+	width:17%;
+	min-width:100px;
+	opacity: 0.7;
+}
+/*显示更多按钮：*/
+#travelNotesPage #showMoreBtn{
+	background-color: #BDE0EC;
+	margin-bottom: 30px;
+}
+
+/*三种按钮：*/
+#travelNotesPage #uploadBtn:hover,#travelNotesPage #uploadBtn:active,
+#travelNotesPage #showMoreBtn:hover,#travelNotesPage #showMoreBtn:active,
+#travelNotesPage #signUpBtn:hover,#travelNotesPage #signUpBtn:focus,#travelNotesPage #signUpBtn:active{
+	opacity: 1;
+	outline: none;
+	box-shadow: 0 0 0 2px #cce5ff;
+	text-shadow: 0 0 1px #fff;
+	color:white;
+}
+@media (min-width: 800px){
+	/*竖直线：*/
+	#travelNotesPage .timeline::before {
+	    left: 50%;
+	    margin-left: -2px;
+	}	
+	/*圆环：*/
+	#travelNotesPage .timeline__item__station {
+	    left: 50%;
+	    margin-left: -30px;
+	    width: 60px;
+	    height: 60px;
+	    padding: 15px;
+	    border-width: 6px;
+	}
+	/*文字内容:;*/
+	/*奇数文字：*/
+	#travelNotesPage .timeline__item__content {
+	    width: 40%;
+	    float:left;
+	    padding: 30px 40px;
+	}
+	/*偶数文字：*/
+	#travelNotesPage .timeline__item__content:nth-child(2n+1){
+		float:right;
+	}
+	/*奇数横条：*/
+	#travelNotesPage .timeline__item__content::before {
+	    top: 30px;
+	    height: 4px;
+	    margin-top: -2px;
+	    width:20%;
+	    left:100%;
+	}	
+	/*偶数横条：*/
+	#travelNotesPage .timeline__item:nth-child(2n) .timeline__item__content::before {
+		left:-20%;
+	}	
+	#travelNotesPage .timeline__item	{
+		margin-bottom: -40px;
+	}
+	#travelNotesPage .contentBody{
+		padding-left:2%;
+		padding-right: 2%;
+	}
+}
+@media (min-width: 1024px){
+	#travelNotesPage .contentDiv{
+		width:90%;
+	}	
+	#travelNotesPage .form-horizontal .form-group-lg .control-label{
+		position: relative;
+		left:-2%;
+	}
+}
+
+/*我的游记：*/
+#travelNotesPage #myTravelArticleContent{
+	width:100%;
+	padding:0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#travelNotesPage #myTravelArticleContent .title{
+	background: -webkit-linear-gradient(left, #33CCCC 1% ,#00CCFF 50%, #33CC99 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	filter: drop-shadow(0px 1px 2px rgba(0, 0,0, .1));	
+
+}
+#travelNotesPage #myTravelArticleContent #myTravelArticleContentBody{
+	width:100%;
+	height: 650px;
+	border-radius: 5px;
+	padding-top: 20px;
+	text-align: center;	
+	color:white;
+	background-image:-webkit-linear-gradient(-270deg, #33CCCC, #00CCFF,#33CCCC,#33CCA3,#33CC99);
+	background-image:linear-gradient(-270deg, #33CCCC, #00CCFF,#33CCCC,#33CCA3,#33CC99);
+}  
+#travelNotesPage .form-group,.form-group-lg{
+	margin-top: 40px;
+}
+#travelNotesPage .form-horizontal .form-group-lg .control-label{
+	font-size: 20px;
+	font-weight: normal;
+
+}
+#travelNotesPage #notetitle{
+	font-size: 16px;
+}
+#travelNotesPage #notebrief{
+	font-size: 16px;
+	height: 80px;
+	line-height: 30px;
+	resize:none;
+	overflow: hidden;
+}
+/*游记封面上传*/
+#travelNotesPage #editAvatar{
+	width:80%;
+	height: 240px;
+	position: relative;
+	border-radius: 5px;
+	background-color: white;
+	margin:0 auto;
+
+}
+#travelNotesPage #mypic{
+	padding-top:20px;
+	padding-bottom: 20px;
+	width: 60%;
+	height: 100%;
+}
+#travelNotesPage #mypic img{
+	width:100%;
+	height: 100%;
+	z-index: 20;
+	vertical-align: middle;
+}
+/*上传图片按钮：*/
+#travelNotesPage #uploadBtn{
+	width:30%;
+	height: 40px;	
+	line-height: 40px;
+	padding:0;	
+	background-color:#BDE0EC;
+}
+#travelNotesPage #uploadBtn:hover{
+	background-color:#b3d9ff;
+}
+/*上传input:*/
+#travelNotesPage #fileinput{
+	opacity:0;
+	position: relative;
+	top:-38px;
+	left:35%;
+	height: 40px;
+	z-index: 2;
+	width:30%;
+}
+/*游记内容：*/
+#travelNotesPage #ArticleContent{
+	width:100%;
+	padding:0;
+}
+#travelNotesPage #ArticleContent .title{
+	text-align: center;
+}
+#travelNotesPage #ArticleContentBody{
+	width:100%;
+	padding:30px;
+	padding-bottom: 40px;
+	color:white;
+	background-image:-webkit-linear-gradient(-270deg, #9999FF, #33CCCC,#33CC99,#99CCFF,#99CCCC,#9999FF);
+	background-image:linear-gradient(-270deg, #9999FF, #33CCCC,#33CC99,#99CCFF,#99CCCC,#9999FF);	
+}
+#travelNotesPage #ArticleContentBody .title{
+	text-align: center;
+}
+/*请编辑游记内容：*/
+#travelNotesPage #noteconlabel h3{
+	font-size: 20px;
+	position: relative;
+	left:-20px;
+}
+/*文本编辑器*/
+#travelNotesPage #ArticleContentBody section {
+    width: 85%;
+    margin: auto;
+    box-shadow:0 0 5px 3px #DFDFDC;
+
+}
+#travelNotesPage #edit{
+	margin-top:40px;
+}
+/*下面的输入框：*/
+#travelNotesPage .froala-element.f-basic{
+	border: solid 1px #c9e4e9;
+	height: 350px;
+	background-color: white;
+
+}
+
+/*上面的工具栏：*/
+#travelNotesPage .froala-editor.f-basic{
+	border: solid 1px #c9e4e9;
+	border-top: solid 5px #edf6f8;
+}
+.froala-element {
+	color:black;
+}
+/*我要提交按钮：*/
+#travelNotesPage #submitdiv{
+	width:100%;
+}
+#travelNotesPage #notesubmit{
+	opacity: 0.7;
+	width:18%;
+	height: 40px;
+	display: block;
+	margin:0 auto;
+	margin-top: 40px;
+	color: white;
+	font-size: 18px;
+	background-color: #81C1CC;
+	border-radius: 10px;
+}
+#travelNotesPage #notesubmit:hover,
+#travelNotesPage #notesubmit:active{
+	opacity: 1;
+	outline: none;
+	box-shadow: 0 0 0 2px  #a4d2da;
+	text-shadow: 0 0 1px #fff;
+}
+#travelNotesPage #alertcontent{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+	color:black;
+}
+#travelNotesPage .modal-footer,
+#travelNotesPage .modal-header{
+	border-top: none;
+	border-bottom: none;
+}
+
+/*报名按钮：*/
+ #travelNotesPage #signUpBtn{
+ 	margin-top:10px;
+ 	margin-bottom: 30px;
+ }
+ /*纸飞机的图标：*/
+ #travelNotesPage #TimeTravelContent .fa-paper-plane-o{
+ 	transform: rotate(180deg);
+	color:#fff;
+	float: right;
+
+ }
+ #travelNotesPage #myTravelArticleContent .fa-paper-plane-o{
+ 	transform: rotate(190deg);
+	color:#fff;
+	float:right;
+ }
+ #travelNotesPage #ArticleContentBody .fa-paper-plane-o{
+ 	transform: rotate(100deg);
+	float: left;
+	color:#fff;
+ }
+
+ /*2.arrangements:活动安排----------------------------------------------2.活动安排-------------------------------*/
+
+#arrangementsPage .contentDiv{
+	width:85%;
+	overflow: hidden; 
+}
+#arrangementsPage .content{
+	width:100%;
+	padding:0px 40px 0px 40px;
+}
+
+#arrangementsPage .title{
+	margin-top:30px;
+	height: 40px;
+	line-height: 40px;
+	font-size:18px;
+	color:#BDE0EC;
+}
+#arrangementsPage .title i{
+	font-size:35px;
+	margin-right: 10px;
+	position: relative;
+	top:10px;
+}		
+#arrangementsPage .title span{
+	border-radius: 3px;
+	display:inline-block;
+	text-align: center;
+}
+#arrangementsPage #activeBriefContent{
+	height: 320px;
+}
+#arrangementsPage #SchedulingBody,
+#arrangementsPage #activeBriefBody{
+	margin-top:15px;
+}
+#arrangementsPage #activeBriefBody .activityText{
+	text-align: left;
+	white-space: pre-wrap;
+	padding:30px;
+	margin:0 auto;
+}
+
+#arrangementsPage #activeBriefBody .activityText{
+	height: 240px;
+	border-bottom:10px dashed #BDE0EC;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 9;
+	-webkit-box-orient: vertical;
+}
+#arrangementsPage .activityPicDiv{
+	padding:20px;
+}
+#arrangementsPage #activityInfBody img{
+	margin-left:30px;
+}
+#arrangementsPage .activityPicDiv img{
+	border-radius: 10px;
+	max-width:340px;
+	width:80%;
+	height: 80%;
+	min-width: 250px;
+	max-height: 200px;
+	min-height: 180px;
+}
+/*活动细则的文字内容：*/
+#arrangementsPage #activityInfContent{
+	height: 350px;
+}
+#arrangementsPage #activityInfBody{
+	margin-top: 30px;
+}
+#arrangementsPage #activityInfBody .activityText{
+	width:100%;
+	height: 240px;	
+	padding:20px;
+	border-bottom:10px dashed #BDE0EC;
+}
+#arrangementsPage .activityText .PIDiv{
+	width:300px;
+	height: 50px;
+    padding-bottom: 10px;
+    margin:0;
+    text-align: left;
+    
+}
+#arrangementsPage .PIDiv .PIDivTitle{
+	color:#BDE0EC;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: normal;
+}
+#arrangementsPage .PIDiv .PIDivTitle i{
+	margin-right:25px;
+	font-size:20px;
+}
+#arrangementsPage .PIDiv:nth-child(1) .PIDivTitle i{
+	margin-right: 20px;
+}
+#arrangementsPage .infor{
+	line-height: 25px;
+    color: #686868;
+    font-size: 14px;
+    margin-left: 50px;
+    width:90%;
+    border-bottom: 1px dotted #999;
+}
+/*行程安排：*/
+/*垂直竖线：*/
+#arrangementsPage #SchedulingBody::before{
+    content: "";
+    height: 100%;
+	width:10px;
+	z-index: 999;
+	position: absolute;
+	background-color:#BDE0EC;
+}
+#arrangementsPage #SchedulingBody{
+	margin-top:30px;
+	/*height:1000px;*/
+}
+#arrangementsPage #SchedulingContent .activityTextDiv{
+	padding-right:0;
+}
+#arrangementsPage #SchedulingContent .activityText{
+	width:100%;
+	height: 240px;	
+	padding:20px;
+	padding-left: 35px;
+}
+#arrangementsPage #SchedulingContent .activityText .date{
+	height:35px;
+	line-height: 35px;
+	color:#BDE0EC;
+	text-align: left;
+	font-size: 22px;
+}
+#SchedulingContent .activityText .dayThings{
+	white-space: pre-wrap;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 10;
+	-webkit-box-orient: vertical;
+}
+#SchedulingContent .activityPicDiv{
+	padding:30px 0 0 0;
+	height: 240px;
+							/*border:0.1px solid red;*/
+}
+#SchedulingContent .activityPicDiv img{
+	padding-left: 10px;
+	float:left;
+	border-radius: 0;
+}
+/*实现角落直角：*/
+#activeBriefBody .BRcorner{
+	z-index: 99;
+	position: relative;
+	left:66%;
+}
+#activeBriefBody .TFcorner{
+	position: relative;	
+	z-index: 99;
+    float: left;
+}
+.Tcorner,.Bcorner{
+    width:120px;
+    height: 10px;
+    background-color:#8EC5E4;   
+    position: absolute;
+}
+.Lcorner,.Rcorner{
+    width:10px;
+    height: 100px;
+    background-color: #8EC5E4;
+    position: absolute;
+}
+
+#activeBriefBody .Tcorner{
+	/*top:-30px;	*/
+	box-shadow: 2px 3px 2px #809fff;
+}
+#activeBriefBody .Lcorner{
+	/*top:-30px;*/
+    left:0;
+    box-shadow: 2px 3px 2px #809fff;
+}
+#activeBriefBody .Bcorner{
+    box-shadow: -2px -3px 2px #809fff;
+    bottom:-40px;
+	left:-5px;
+}
+#activeBriefBody .Rcorner{
+    left:115px;
+    top:-60px;
+    box-shadow: -2px -3px 2px #809fff;	
+}
+#activityInfBody .TRcorner{
+	position: relative;	
+	left:76%;
+}
+#activityInfBody .Tcorner{
+	/*top:-30px;	*/
+	box-shadow: 2px 3px 2px #809fff;
+}
+#activityInfBody .Tcorner{
+	box-shadow: -2px 3px 2px #809fff;
+	/*top:-10px;*/
+}
+#activityInfBody .Rcorner{
+	box-shadow: -2px 3px 2px #809fff;
+	left:115px;
+}
+#activityInfBody .BLcorner{
+	float:left;
+	z-index: 99;
+	position: absolute;
+}
+#activityInfBody .Bcorner{
+	top:20px;
+	box-shadow: 2px -3px 2px #809fff;
+}
+#activityInfBody .Lcorner{
+	top:-80px;
+	box-shadow: 2px -3px 2px #809fff;
+}
+/*行程安排：*/
+#SchedulingBody .Tcorner{
+	box-shadow: 2px 3px 2px #809fff;	
+}
+#SchedulingBody .Lcorner{
+	box-shadow: 2px 3px 2px #809fff;	
+}
+#firstTFcorner{
+	position: relative;	
+	left:2%;
+}
+#firstTRcorner{
+	position: relative;	
+	left:100%;
+}
+#firstTRcorner .Tcorner{
+	left:-110px;
+	box-shadow: -2px 3px 2px #809fff;
+}
+#firstTRcorner .Rcorner{
+	box-shadow: -2px 3px 2px #809fff;
+}
+#SchedulingBody .activityPicDiv .Tcorner{
+	box-shadow: -2px 3px 2px #809fff;
+}
+#SchedulingBody .activityPicDiv .Rcorner{
+	box-shadow: -2px 3px 2px #809fff;
+	left:115px;
+}
+#lastBLcorner{
+	position: relative;
+	left:15px;
+}
+#lastBRcorner{
+	position: relative;
+	left:100%;
+}
+#lastBLcorner .Bcorner{
+	top:100px;
+	box-shadow: 2px -3px 2px #809fff;
+}
+#lastBLcorner .Lcorner{
+	box-shadow: 2px -3px 2px #809fff;
+ 
+}
+#lastBRcorner .Bcorner{
+	left:-110px;
+	top:100px;
+	box-shadow: -2px -3px 2px #809fff;
+
+} 
+#lastBRcorner .Rcorner{
+	box-shadow: -2px -3px 2px #809fff;
+}
+
+
+
+/*我要报名按钮：*/
+#arrangementsPage #signUpBtnDiv{
+  /*margin-top:30px;*/
+  height: 100px;
+  width:100%;	
+  padding:30px;
+  text-align: center;
+}
+#arrangementsPage #signUpBtn{
+	font-size:18px;
+	border-radius:10px;
+	color:white;
+	background-color: #BDE0EC;
+	height:40px;
+	width:17%;
+	min-width:100px;
+	opacity: 0.7;
+
+}
+#arrangementsPage #signUpBtn:hover,#arrangementsPage #signUpBtn:focus,#arrangementsPage #signUpBtn:active{
+	opacity: 1;
+	outline: none;
+	box-shadow: 0 0 0 2px #cce5ff;
+	text-shadow: 0 0 1px #fff;
+}
+
+ /*3.notice:注意事项----------------------------------------------3.注意事项-------------------------------*/
+
+#noticePage .contentDiv{
+	width:90%;
+	margin:0 auto;
+	/*padding:20px;*/
+	text-align: left;
+}
+#noticePage .content{
+	width:100%;
+	border-bottom:1px #BDE0EC solid;
+	padding:20px 40px 20px 40px;
+}
+#noticePage .title{
+	color:#BDE0EC;
+	text-align: left;
+	margin-bottom: 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size:20px;
+}
+#noticePage .title i{
+	font-weight: 200;
+	color:#BDE0EC;
+	margin-right:10px;
+	position:relative;
+	top:5px;
+}
+#noticePage .contentBody{
+	height: auto;
+	/*width:95%;*/
+	margin-left:50px;
+}
+#noticePage .contentBody div{
+	min-width:25px;
+	margin-bottom: 20px;
+}
+
+#noticePage .contentBody div span{
+	float: left;
+	display: inline-block;
+	text-align: center;
+	line-height: 25px;
+	height: 25px;
+	width:25px;
+	border-radius:25px;
+	border:1px solid #BDE0EC;
+	margin-right: 10px;
+	box-shadow: 1px 1px 1px grey;
+	color:#BDE0EC;
+	text-shadow: 0px 0px 0.5px grey;
+}
+#noticePage .contentBody div p{
+	padding-left:35px;
+	line-height: 25px;
+
+}
+/*我要报名按钮：*/
+#noticePage #signUpBtnDiv{
+  margin:0 auto;
+  height: 100px;
+  width:100%;	
+  padding:30px;
+  text-align: center;
+}
+#noticePage #signUpBtn{
+	font-size:18px;
+	border-radius:10px;
+	color:white;
+	background-color: #BDE0EC;
+	height:40px;
+	width:17%;
+	min-width:100px;
+	opacity: 0.7;
+
+}
+#noticePage #signUpBtn:hover,#signUpBtn:focus,#signUpBtn:active{
+	opacity: 1;
+	outline: none;
+	box-shadow: 0 0 0 2px #cce5ff;
+	text-shadow: 0 0 1px #fff;
+}
+
+ /*4.fee:费用说明----------------------------------------------4.费用说明-------------------------------*/
+#feePage .contentDiv{
+  margin:0 auto;
+  height: 540px;
+  width:90%;
+  border-bottom: 1px solid #BDE0EC;
+}
+/*中间圆环：*/
+#feePage .content {
+  height: 400px;
+  width:380px;
+  margin: 0 auto;
+  margin-top: -25px;
+}
+
+#feePage .circle-container {
+	position: relative;
+	/*perspective: 1000;	*/
+	margin: 0 auto;	
+	height: 320px;
+    width:320px;
+
+}
+		
+#feePage .circle-container:hover .circle {
+	transform: rotate3d(45, 45, 0, 180deg);
+}
+		
+#feePage .circle-container:hover .outer-ring {
+	transform: rotate3d(45, 0, 0, 180deg);
+}
+
+#feePage .circle-container:hover .outer-outer-ring {
+	transform: rotate3d(45, 0, 0, 180deg);
+}
+		
+#feePage .circle-container, #feePage .front, .back {
+	position:relative;
+	top:200px;
+	width: 175px;
+	height: 175px;
+}
+		
+#feePage .circle, .outer-ring, #feePage .outer-outer-ring {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+		
+#feePage .circle {
+	position: relative;
+	width: 175px;
+	height: 175px;
+}
+		
+#feePage .front, #feePage .back {
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+/*正面的内圆心：		*/		
+#feePage .front {
+	background-color: #fff;
+	z-index: 2;
+
+}
+		
+#feePage .front p {
+	margin-top: 30%;
+	margin-left:10%;
+	font-weight: 700;
+	color: #BDE0EC;
+}
+/*反面的内圆心：		*/
+#feePage .back {
+	transform: rotate3d(45,45,0,180deg);
+}
+		
+#feePage .back-logo {
+	width: 100%;
+	width:175px;
+	height: 175px;
+	border-radius: 50%;
+	height: 100%;
+}
+		
+#feePage .outer-ring {
+		
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 191px;
+	height: 191px;
+	background-color:#BDE0EC;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+
+}
+/*最外面的圆:*/
+#feePage .outer-outer-ring {
+	background-color:#BDE0EC;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 211px;
+	height: 211px;
+	/*background-color: rgba(255,255,255,0);*/
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+#feePage costItemsNumber{
+	visibility: hidden;
+	position: absolute;
+}
+#feePage costItem{
+	visibility: hidden;
+	position: absolute;	
+}
+#feePage .noItem{
+	display: none;
+}
+#feePage div.child{
+	width: 85px;
+	height: 85px;
+		/*偏绿色：#FFDEE9;偏蓝色：#BDE0EC；偏粉色：#B5FFFC；nav背景： #F5FCFE*/
+	background-image:linear-gradient(0deg, #BDE0EC 0%,  #F5FCFE 100%);
+	border-radius: 50%;
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	color:#99bbff;
+	text-align:center;
+	line-height: 90px;
+	/*transform: transform 3s ease-in-out;*/
+	transition: 1s;/*转的速度：*/	
+	transform-style: preserve-3d;
+	transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+	/*transition: transform 3;s cubic-bezier(0.680, -0.550, 0.265, 1.550);*/
+}
+#feePage div.child:hover{
+	width:90px;
+	height: 90px;
+	line-height: 90px;
+	text-shadow: 0 0 3px #FFDEE9;
+	color:#4d88ff;
+}
+#feePage .child:active,.child:focus{
+	border:none;
+	outline: none;
+}
+#feePage .popover{
+	width:250px;
+}
+#feePage .popover-title{
+	background-color: #F5FCFE;
+}
+#feePage .popover-content{
+	background-color:white;
+}
+#feePage #signUpBtnDiv{
+  margin:0 auto;
+  height: 100px;
+  width:100%;	
+  padding:30px;
+}
+#feePage #signUpBtn{
+	font-size:18px;
+	border-radius:10px;
+	color:white;
+	background-color: #BDE0EC;
+	height:40px;
+	width:17%;
+	min-width:100px;
+	opacity: 0.7;
+
+}
+#feePage #signUpBtn:hover,#feePage #signUpBtn:focus,#feePage #signUpBtn:active{
+	opacity: 1;
+	outline: none;
+	box-shadow: 0 0 0 2px #cce5ff;
+	text-shadow: 0 0 1px #fff;
+}
+
+ /*5.attention:申请要求----------------------------------------------5.申请要求-------------------------------*/
+
+#attentionPage .contentDiv{
+	width:90%;
+	margin:0 auto;
+	/*padding:20px;*/
+	text-align: center;
+}
+#attentionPage .content{
+	font-size:16px;
+	/*---------------------------------------------字体大小*/
+	width:100%;
+	height: auto;
+	min-height: 200px;
+	/*border-bottom:1px #BDE0EC solid;*/
+	padding:20px 40px 20px 40px;
+}
+#attentionPage .title{
+	color:#BDE0EC;
+	text-align: center;
+	margin-bottom: 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size:20px;
+}
+#attentionPage .title i{
+	font-weight: 200;
+	color:#BDE0EC;
+	margin-right:10px;
+	position:relative;
+	top:5px;
+}
+/*content1的内容：*/
+#attentionPage .contentBody2{
+	min-height: 230px;
+	color:linear-gradient(90deg,#00FFCC, #00CCFF);
+}
+/*step1的样式：*/
+#attentionPage .contentBody2 div span{
+	display: block;
+	font-size:26px;
+	color:#BDE0EC;
+	font-family: 'Lobster';
+	text-shadow: 0px 0px 0.5px grey;
+}
+#attentionPage .contentBody2 div{
+	text-align: center;
+}
+#attentionPage .contentBody2 div p{
+	color:#BDE0EC;
+
+}
+#attentionPage .contentBody2 div p:hover,.contentBody2 div p i:hover,.contentBody .col-sm-6  p:hover{
+	/* 字体渐变 */
+	opacity: 1;
+	background: -webkit-linear-gradient(left, #00FFCC 1% , #00CCFF 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	/*filter: drop-shadow(0px 1px 2px rgba(0, 0,0, .1));	*/
+}
+
+#attentionPage .contentBody2 div p i{
+	position: relative;
+	top:5px;
+	line-height: 32px;
+	margin-right:10px;
+}
+/*content2的内容：*/
+#attentionPage .contentBody{
+	min-height:220px;
+	height: auto;
+}
+#attentionPage .contentBody .col-sm-6{
+	text-align:center;
+	min-width:100px;
+	margin-bottom: 30px;
+	line-height: 25px;
+	height:80px;
+
+}
+#attentionPage .contentBody .col-sm-6 p{
+	/*padding-left:35px;	*/
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	color:#BDE0EC;	
+}
+/*NO1的1样式：*/
+#attentionPage .contentBody .col-sm-6 div span{
+	margin-bottom: 10px;
+	display: inline-block;
+	line-height: 25px;
+	height: 25px;
+	width:25px;
+	border-radius:25px;
+	border:1px solid #BDE0EC;
+	margin-left: 10px;
+	box-shadow: 1px 1px 1px grey;
+	font-size: 20px;
+	background: -webkit-linear-gradient(left, #00FFCC 1% , #00CCFF 100%); 
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	filter: drop-shadow(0px 1px 2px rgba(0, 0,0, .1));
+}
+/*NO1样式:*/
+#attentionPage .contentBody .col-sm-6 div{
+	color:#BDE0EC;
+	font-size:26px;
+	margin-bottom: 10px;
+	text-shadow: 0px 0px 0.5px grey;
+}
+#attentionPage  hr{
+	width:100%;
+}
+
+/*我要报名按钮：*/
+#attentionPage #signUpBtnDiv{
+  margin:0 auto;
+  height: 100px;
+  width:100%;	
+  padding:20px;
+  text-align: center;
+}
+#attentionPage #signUpBtn{
+	font-size:18px;
+	border-radius:10px;
+	color:white;
+	background-color: #BDE0EC;
+	height:40px;
+	width:17%;
+	min-width:100px;
+	opacity: 0.7;
+
+}
+#attentionPage #signUpBtn:hover,#attentionPage #signUpBtn:focus,#attentionPage #signUpBtn:active{
+	opacity: 1;
+	outline: none;
+	box-shadow: 0 0 0 2px #cce5ff;
+	text-shadow: 0 0 1px #fff;
+}
+
+ /*6.attention:我要报名----------------------------------------------6.我要报名-------------------------------*/
+#signUpPage .contentDiv{
+	width:85%;
+	overflow: hidden;
+}
+#signUpPage .content{
+	width:100%;
+	padding:0px 40px 0px 40px;
+}
+#signUpPage .content:nth-child(1){
+	height: 550px;
+}
+#signUpPage #inputContent{
+	border-bottom: 1px  solid #eee;
+	padding-bottom: 35px;
+}
+#signUpPage form{
+	height: 360px;
+}
+#signUpPage .title{
+	margin-top:30px;
+	height: 40px;
+	line-height: 40px;
+	font-size:18px;
+}
+#signUpPage #activityInfTitle{
+	margin-bottom:15px;	
+}
+
+#signUpPage .title i{
+	color:#BDE0EC;
+}		
+#signUpPage .title span{
+	border-radius: 3px;
+	display:inline-block;
+	width:15%;
+	height: 40px;
+	text-align: center;
+	background-color:#BDE0EC; 
+	color:white;	
+}
+#signUpPage .contentBody .col-xs-12{
+	margin-top: 20px;
+	height: 40px;
+	line-height: 40px;
+}
+#signUpPage .contentBody .col-xs-12 div{
+	text-align: left;
+
+}	
+#signUpPage .contentBody .col-xs-12 div:nth-child(1){
+	background-color: #BDE0EC; 
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	color:white;
+
+}
+#signUpPage .contentBody .col-xs-12 div:nth-child(2){
+	background-color: #F2F2F2; 
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	overflow: auto;
+
+}	
+#signUpPage .contentBody .col-xs-12 input{
+	background-color:#F2F2F2; 
+	border:0;
+	width:100%;
+	height: 40px;
+}
+/*提示信息：*/
+#signUpPage .promptLine{
+	margin-top: 0;
+}
+#signUpPage #NamePrompt,
+#signUpPage #TelPhonePrompt,
+#signUpPage #EmailPrompt,
+#signUpPage #WeChatPrompt,
+#signUpPage #PhonePrompt{
+	background-color:#f9f2f4;
+	text-align: center;
+	color:red;
+	margin-top: 0;
+
+}
+#signUpPage .prompt span{
+	float: right;
+	font-size: 20px;
+	position: relative;
+	top:-8px;
+	right:5px;
+}
+/*我要报名按钮：*/
+#signUpPage #signUpBtnDiv{
+  margin:0 auto;
+  height: 100px;
+  width:100%;	
+  padding:20px;
+  text-align: center;
+}
+#signUpPage #signUpBtn{
+	font-size:18px;
+	border-radius:10px;
+	color:white;
+	background-color: #BDE0EC;
+	height:40px;
+	width:17%;
+	min-width:100px;
+	opacity: 0.7;
+
+}
+#signUpPage #signUpBtn:hover,#signUpPage #signUpBtn#BDE0EC;:focus,#signUpPage #signUpBtn:active{
+	opacity: 1;
+	outline: none;
+	box-shadow: 0 0 0 2px #cce5ff;
+	text-shadow: 0 0 1px #fff;
+}
+#signUpPage .confirmBtn,#signUpPage #deleteBtn{
+	border-color: #BDE0EC;
+	background-color:white;	
+}
+#signUpPage .confirmBtn:hover,#signUpPage .confirmBtn:active,#signUpPage #deleteBtn:hover,#signUpPage #deleteBtn:active{
+	color:white;
+	background-color: #BDE0EC;
+}
+#signUpPage #successModal-footer{
+	/*text-align: center;*/
+}
+#signUpPage .modal-body{
+	margin-top:20px;
+}
+#signUpPage .modal-body button{
+margin-top: -20px;
+
+}
+#signUpPage .modal-footer{
+	width:80%;
+	border:0;
+}

@@ -1,0 +1,186 @@
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{min-width: 1000px;width:100%;}
+
+textarea{ resize : none; } 
+#returnnote{
+	position: absolute;
+	top:10%;
+	left:3%;
+	color:white;
+	font-weight: bold;
+	background-color: transparent;
+	border:2px solid white;
+	width:100px;
+}
+#notebasictitle{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	margin-top:80px;
+	color:#09CCF6;
+}
+#notebasictitle h3{
+	font-size: 20px;
+}
+#notebasic{
+	width:80%;
+	min-width:720px;
+	margin-top:50px;
+	padding:100px;
+	color:white;
+	background-image:-webkit-linear-gradient(-270deg, #33CCCC, #00CCFF,#33CCCC,#33CCA3,#33CC99);
+	background-image:linear-gradient(-270deg, #33CCCC, #00CCFF,#33CCCC,#33CCA3,#33CC99);
+	position: relative;
+}
+#border1{
+	position: absolute;
+	top:45%;
+	left:5%;
+}
+#border1 img{
+	width:100%;
+}
+#border2{
+	position: absolute;
+	top:5%;
+	right:5%;
+}
+#border2 img{
+	width:100%;
+}
+#leftlogo{
+	position: absolute;
+	top:-8%;
+	left:-5%;
+}
+#leftlogo img{
+	width:50%;
+}
+.form-group,.form-group-lg{
+	margin-top: 30px;
+}
+.form-horizontal .form-group-lg .control-label{
+	font-size: 20px;
+	font-weight: normal;
+}
+
+
+#editAvatar{
+	width:260px;
+	height: 180px;
+	position: relative;
+	border-radius: 5px;
+	background-color: white;z
+}
+#mypic{
+	position: absolute;
+	top:8px;
+	left:5px;
+}
+#mypic img{
+	width: 250px;
+	height:160px;
+	z-index: 20;
+}
+#mypic:hover,#mypic:focus{
+	/*box-shadow: 0 0 40px red;*/
+}
+#editText{
+	position: absolute;
+	width:80px;
+	height: 30px;
+	top:190px;
+	left: 30%;
+	line-height: 30px;
+	color:white;
+	text-align: center;
+	background-color: grey;	
+}
+#editText:hover{
+	text-shadow: 0 0 10px #46A3FF;	
+	box-shadow:  0 0 5px 	#66B3FF;
+}
+#notecontitle{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	margin-top:80px;
+	color:#09CCF6;
+}
+#notecontitle h3{
+	font-size: 20px;
+}
+#notecon{
+	width:80%;
+	min-width:720px;
+	margin-top:50px;
+	margin-bottom: 50px;
+	padding:100px;
+	padding-bottom: 50px;
+	color:white;
+	position: relative;
+	background-image:-webkit-linear-gradient(-270deg, #9999FF, #33CCCC,#33CC99,#99CCFF,#99CCCC,#9999FF);
+	background-image:linear-gradient(-270deg, #9999FF, #33CCCC,#33CC99,#99CCFF,#99CCCC,#9999FF);
+}
+#noteconlabel{
+	position: absolute;
+	top:5%;
+	left: 8%;
+}
+#noteconlabel h3{
+	font-size: 20px;
+}
+#rightlogo{
+	position: absolute;
+	top:0;
+	right:-10%;
+}
+#rightlogo img{
+	width:50%;
+}
+/*鏂囨湰缂栬緫鍣�*/
+section {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+
+
+}
+#edit{box-shadow:0 0 5px 3px #DFDFDC;}
+.froala-element.f-basic{
+	background-color: white;
+	border:none;
+	height: 200px;
+}
+.froala-editor{
+	border:none;
+}
+.froala-editor.f-basic{
+	border-bottom-color: #999999;
+}
+.froala-element p, p.fr-tag{
+	color:black;
+}
+#submitdiv{
+	width:100%;
+}
+#notesubmit{
+	width:160px;
+	height: 52px;
+	display: block;
+	margin:0 auto;
+	margin-top: 30px;
+	color: white;
+	font-size: 18px;
+	background-color: #81C1CC;
+	border-radius: 10px;
+}
+#alertcontent{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+	color:black;
+}
+.modal-footer,.modal-header{
+	border-top: none;
+	border-bottom: none;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring" /> <!--将action交给spring装载  -->
+	<package name="default" namespace="/" extends="struts-default">
+		<!--异常处理 -->
+		<global-results>
+			<result name="errorcheck">/index.jsp</result>
+			<result name="errorUser">/WEB-INF/exception/erroruser.jsp</result>
+			<result name="errorpsw">/WEB-INF/exception/errorpsw.jsp</result>
+			<result name="error">/WEB-INF/exception/404.html</result>
+		</global-results>
+		<!-- 异常映射 -->
+		<global-exception-mappings>
+			<exception-mapping result="errorcheck"
+				exception="track.jx.exception.ErrorCheckException"></exception-mapping>
+			<exception-mapping result="errorUser"
+				exception="track.jx.exception.UserNotFoundException"></exception-mapping>
+			<exception-mapping result="errorpsw"
+				exception="track.jx.exception.ErrorPasswordException"></exception-mapping>
+				<exception-mapping result="error"
+				exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		<!--登录action -->
+		<action name="loginAction" class="track.jx.action.LoginAction">
+			<result>/index.jsp</result>
+		</action>
+		<action name="homeAction" class="track.jx.action.HomeAction">
+			<result>/index.jsp</result>
+		</action>
+		<!--注册action -->
+		<action name="registerAction" class="track.jx.action.RegisterAction">
+			<result>/index.jsp</result>
+		</action>
+		<action name="*Center" class="track.jx.action.{1}CenterAction">
+			<result>/WEB-INF/user/{1}Center.jsp</result>
+		</action>
+		<action name="publishnote" class="track.jx.action.NotePublishAction">
+			<result>/WEB-INF/user/PublishNote.jsp</result>
+		</action>
+		<action name="publishactivity" class="track.jx.action.ActivityPublishAction">
+			<result>/WEB-INF/user/PublishActivity.jsp</result>
+		</action>
+		<action name="detail" class="track.jx.action.ActivityDetailxAction">
+			<result>/WEB-INF/user/Activity.jsp</result>
+		</action>
+		<action name="article" class="track.jx.action.NoteAction">
+			<result>/WEB-INF/user/TravelArticle.jsp</result>
+		</action>
+		<action name="village" class="track.jx.action.VillageAction">
+			<result>/WEB-INF/user/Village.jsp</result>
+		</action>
+		<action name="villagepraise" class="track.jx.action.VillagePraiseAction">
+			<result>/WEB-INF/user/VillagePraise.jsp</result>
+		</action>
+		<action name="*Praise" class="track.jx.action.{1}PraiseAction">
+			<result>/WEB-INF/user/Praise.jsp</result>
+		</action>
+		<action name="comment" class="track.jx.action.CommentAction">
+			<result>/WEB-INF/user/CommentPage.jsp</result>
+		</action>
+		<action name="pubactivity" class="track.jx.action.ActivityaddAction">
+			<result>/WEB-INF/user/Activity.jsp</result>
+		</action>
+		<action name="joinactivity" class="track.jx.action.ActivityJoinAction">
+			<result>/WEB-INF/user/Activity.jsp</result>
+		</action>
+	</package>
+	<package name="setting" namespace="/setting" extends="struts-default">
+		<global-results>
+			<result name="errorcheck">/index.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="errorcheck"
+				exception="track.jx.exception.ErrorCheckException"></exception-mapping>
+		</global-exception-mappings>
+
+		<action name="*" class="track.jx.action.{1}SettingAction">
+			<result>/WEB-INF/user/PersonalCenter.jsp</result>
+		</action>
+	</package>
+	<package name="page" namespace="/page" extends="struts-default">
+		<action name="activity" class="track.jx.action.ActivityPageAction">
+			<result name="m">/WEB-INF/user/activityPage1.jsp</result>
+			<result name="f">/WEB-INF/user/activityPage2.jsp</result>
+			<result name="y">/WEB-INF/user/activityPage3.jsp</result>
+			<result name="z">/WEB-INF/user/activityPage4.jsp</result>
+		</action>
+		<action name="myPageArticle" class="track.jx.action.MyNotePageAction">
+			<result>/WEB-INF/user/MyPageNote.jsp</result>
+		</action>
+		<action name="ActivitySelectLoadPage" class="track.jx.action.ActivitySelectLoadAction">
+			<result name="aslp">/WEB-INF/user/ActivityPage.jsp</result>
+		</action>
+  		<action name="VillageCenterPage" class="track.jx.action.VillageCenterPageAction">
+			<result name="vcp">/WEB-INF/user/VillagePage.jsp</result>
+		</action>
+		<action name="VActivityPage" class="track.jx.action.VActivityPageAction">
+			<result name="va">/WEB-INF/user/VActivityPage.jsp</result>
+		</action>
+		<action name="CommentPage" class="track.jx.action.CommentPageAction">
+			<result>/WEB-INF/user/CommentPage.jsp</result>
+		</action>
+		<action name="delete" class="track.jx.action.NoteDeleteAction">
+			<result>/WEB-INF/user/MyPageNote.jsp</result>
+		</action>
+	</package>	
+	<package name="admin" namespace="/admin" extends="struts-default">
+		<action name="deleteac" class="track.jx.action.admin.ActivityDeleteAction">
+			<result>/admin/Activity.jsp</result>
+		</action>
+		<action name="*" class="track.jx.action.admin.{1}Action">
+			<result>/admin/{1}.jsp</result>
+		</action>
+	</package>
+	<!-- Add packages here -->
+</struts>

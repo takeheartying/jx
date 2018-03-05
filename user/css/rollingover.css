@@ -1,0 +1,83 @@
+.demo{
+    padding: 3em 0;
+}
+.diarybox{
+    position: relative;
+    perspective: 1000px;
+}
+.diarybox .diarybox-img{
+    transform: rotateY(0);
+    transition: all 0.50s ease-in-out 0s;
+}
+.diarybox:hover .diarybox-img{
+    transform: rotateY(-90deg);
+}
+.diarybox .diarybox-img img{
+    width: 100%;
+    height: auto;
+}
+.diarybox .diarybox-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    transform: rotateY(90deg);
+    transition: all 0.50s ease-in-out 0s;
+}
+.diarybox:hover .diarybox-content{
+    transform: rotateY(0);
+}
+.diarybox .diarytitle{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.diarybox .diarydescription{
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+}
+.diarybox .diarytitle:after,
+.diarybox .diarydescription:after{
+    content: "";
+    width: 80%;
+    display: block;
+    border-bottom: 1px solid #fff;
+    margin: 15px auto;
+}
+.diarybox .diarysocial-links{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.diarybox .diarysocial-links li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.diarybox .diarysocial-links li a{
+    font-size: 20px;
+    color: #a6a6a6;
+}
+.diarybox .diarysocial-links li a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+@media only screen and (max-width: 990px) {
+    .diarybox{  margin-bottom:20px; }
+}
+@media only screen and (max-width: 479px) {
+    .diarybox .diarybox-content{ padding: 20px; }
+}
+@media only screen and (max-width:1024px) {
+    .diarybox .diarybox-content{
+        padding: 20px; 
+    }
+    .diarybox .diarydescription{
+        max-height:149px;
+        overflow: hidden;
+    }
+}

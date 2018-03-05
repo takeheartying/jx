@@ -1,0 +1,523 @@
+/*乡村*/
+#ruralDiv{
+	width: 950px;
+	height: 200px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+#ruralImgLeft{
+	width: 180px;
+	padding-top: 50px;
+	margin-right: 7px;
+	float: left;
+}
+#ruralImgLeft img{
+	width: 100%;
+}
+#ruralWord{	
+	width: 570px;
+	padding-top: 120px;
+	margin-right: 10px;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+}
+#ruralImgRight{
+	width: 180px;
+	margin-top: 30px;
+	float: left;
+}
+#ruralImgRight img{
+	width: 90%;
+
+}
+
+
+/*分页：*/
+
+.myPage{
+	width:400px;
+	margin:0 auto;
+	margin-top: 20px;
+	height: 80px;
+}
+.myPage li{
+	margin-left:10%;
+	border:2px solid #8EC5E4 ;
+	width:50px;
+	height:50px;
+	line-height:50px;
+	border-radius:50%;
+	float:left;
+	background-color:white;
+
+}
+.myPage li a{
+	color:#666;
+	list-style: none;	
+}
+.myPage li:hover,.myPage .choosen{
+
+	border:2px solid white ;
+	background-color:#8EC5E4 ;
+	cursor:pointer;
+}
+.myPage li:hover a{
+	color:white;
+	text-shadow: 1px 1px 2px white;
+	text-decoration: none;
+}
+
+
+
+
+
+/* 图片遮罩*/
+.box{
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+.box:before{
+	content: "";
+	width: 0;
+	height: 100%;
+	background: #000;
+	padding: 14px 18px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	opacity: 0;
+	transition: all 500ms cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+}
+.box:hover:before{
+	width: 100%;
+	left: 0;
+	opacity: 0.5;
+}
+.box img{
+	width: 100%;
+	height: auto;
+}
+.box .box-content{
+	width: 100%;
+	padding: 14px 18px;
+	color: #fff;
+	position: absolute;
+	top: 25%;
+	left: 0;
+}
+.box .title{
+	font-size: 25px;
+	line-height: 30px;
+	text-transform: uppercase;
+	margin: 0;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+}
+.box .post{
+	font-size: 15px;
+	text-transform: capitalize;
+	opacity: 0;
+	transition: all 0.5s ease 0s;
+}
+.box:hover .title,
+.box:hover .post{
+	opacity: 1;
+	transition-delay: 0.7s;
+}
+.box .icon{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin-top: 15px;
+}
+.box .icon li{
+	display: inline-block;
+}
+.box .icon .up{
+	/*width: 52px;
+	height: 52px;*/
+}
+.box .icon li a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	margin-right: 5px;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all 0.5s ease 0s;
+	text-decoration: none;
+}
+.upspan{
+	opacity: 0;
+	font-size: 18px;
+	display: inline-block;
+	width: 20px;
+}
+.box:hover .upspan{
+	opacity: 1;
+	transition: opacity 0.5s ;
+}
+.box:hover .state{
+	visibility: visible;
+}
+.box:hover .icon li a{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.5s;
+}
+.box:hover .icon li:last-child a{
+	transition-delay: 0.8s;
+}
+.state{
+	position: relative;
+    display: inline-block;
+    height: 32px;
+    z-index: 3;
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+    padding: 0 10px;
+	visibility: hidden;
+	margin-left: 5px;
+}
+
+.state span{
+	word-break: break-all;
+    word-wrap: break-word;
+	position: absolute;
+    background-color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+.blr{
+    top: 50%;
+    bottom: 50%;
+    width: 1px;
+}
+.blr.leftBorder{
+	left:0;
+}
+.blr.rightBorder{
+	right:0;
+}
+.btb{
+	left: 50%;
+    right: 50%;
+    height: 1px;
+}
+.btb.topBorder{
+	top:0;
+}
+.btb.bottomBorder{
+	bottom:0;
+}
+
+
+
+
+/*点赞爱心*/
+@import url(http://fonts.useso.com/css?family=Raleway:200,500,700,800);
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?rretjt');
+	src:url('../fonts/icomoon.eot?#iefixrretjt') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?rretjt') format('woff'),
+		url('../fonts/icomoon.ttf?rretjt') format('truetype'),
+		url('../fonts/icomoon.svg?rretjt#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.love{
+	width: 100px;
+	height: 50px;
+}
+/* Icons button */
+.icobutton {
+	font-size: 3em;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	color: #c0c1c3;
+	border: 0;
+	background: none;
+	overflow: visible;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.icobutton .fa {
+	display: block;
+	padding: 0 0.1em;
+}
+
+.icobutton__text {
+	font-size: 0.75em;
+	position: absolute;
+	top: 100%;
+	left: -50%;
+	width: 200%;
+	text-align: center;
+	line-height: 1.5;
+	color: #a6a6a6;
+}
+
+.icobutton__text--side {
+	top: 0;
+	left: 100%;
+	width: 100%;
+	width: auto;
+	padding: 0 0 0 0.25em;
+}
+
+/* fix for mo.js */
+.icobutton svg {
+	left: 0;
+}
+
+.icobutton:hover,
+.icobutton:focus {
+	outline: none;
+}
+
+/* Unicorn */
+.icobutton--unicorn svg {
+	fill: #c0c1c3;
+}
+/*点赞爱心*/
+
+
+
+/*向下的箭头*/
+.down{
+	width: 50px;
+	height: 50px;
+	margin-bottom: -20px;
+	border: 2px solid;	
+	border-radius: 25px;
+	cursor: pointer;
+}
+.down img{
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+}
+.down:hover{
+	border: none;
+}
+
+
+
+/*历史*/
+.DivClass{
+	width: 850px;
+	height: 650px;
+	margin-top: 20px;
+	background: url(../images/BackGround1.jpg) no-repeat;
+	background-size: 100%;
+	margin-bottom: 50px;
+}
+.DivHead{
+	width: 550px;
+	height: 150px;
+	padding-top: 60px;
+	position: relative;
+	margin-bottom: 60px;
+}
+.DivHead h3{
+	position: absolute;
+	left: 48%;
+	top: 50%;
+}
+.smallPlane{
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-left: 60px;
+}
+.smallPlane img{
+	width: 80%;
+}
+
+.introImgDiv{
+	width: 550px;
+	height: 230px;
+	overflow: hidden;
+
+}
+.introImgDiv img{
+	width: 100%;
+	height: 100%;
+}
+.DivWord{
+	width: 550px;
+	height: 140px;
+	margin-top: 30px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;
+}
+
+
+
+
+/*乡村活动*/
+#activityDiv{
+	width: 850px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+
+
+
+
+
+/*筛选栏*/
+#searchBackImgDiv{
+	width: 700px;
+	height: 90px;
+	background-image: url(../images/villagesearch.png);
+	margin: 0 auto;
+	margin-bottom: 50px;
+	border:2px solid rgba(103, 251, 145, 0.3);
+	border-radius: 5px;
+}
+
+#searchNavFirstDiv{
+	width: 700px;
+	height: 70px;
+	padding-top: 20px;
+}
+
+
+
+/*活动文字和图片*/
+.countryMainClass{
+	width: 850px;
+	height: 565px;
+	margin-top: 20px;
+	background: url(../images/countryBackImg.jpg) no-repeat;
+	background-size: 100%;
+	margin-bottom: 50px;
+}
+.fourDivClass{
+	width: 380px;
+	height: 210px;
+	float: left;
+	margin:45px;
+}
+.fourDivClass h3{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	font-size:20px;
+
+}
+.countryWordClass{
+	background-image: url(../images/countrywordBack.png);
+	margin-right: 0px;
+	position: relative;
+}
+
+.ImgClass{width:370px;margin-left: 0px;overflow: hidden;}
+.countryImgClass{
+	width: 100%;
+	height: 100%;
+}
+
+/*标签彩带：*/
+.ribbon{
+	position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 0px;
+    top:0px;
+    overflow: hidden;
+    z-index: 9;
+}
+.ribbonLable{
+	color: #FFF;
+    transition: color .2s;
+    /*background-color: #00a8e7;*/ /*蓝色背景彩带*/
+    background-color:rgb(216,0,0); /*红色背景彩带*/
+    width: 100px;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: -24px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/*图片变化效果*/
+@keyframes ani{
+
+    0%{
+        width: 550px;
+        height: 230px;       /*若不设置 0%：没有平滑的动画效果 */
+        margin-left: 0;
+    /*    background-image: 
+*/    }                                        /*若设置多个百分梯度：动画会分梯度生硬过度*/
+
+    100%{
+        width: 660px;
+        height: 276px; 
+        margin-left: -55px;
+        margin-top: -23px;
+
+    }
+}
+
+.introImg:hover{
+	
+    animation:ani 1s;                        /*与@keyframes绑定 并规定在1s内完成动画*/
+    animation-fill-mode : forwards;          /*鼠标不离开容器，仍保持动画的最后效果*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,311 @@
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{min-width: 1000px;}
+textarea{ resize : none; } 
+#title{
+	text-align: center;
+	min-width: 900px;
+	margin:0 auto;
+	margin-top:50px;
+}
+#title h2{
+	font-size: 20px;
+	cursor: pointer;
+}
+.col-md-4{
+	padding-bottom: 20px;
+}
+#title .col-md-4:nth-child(1){
+	color:#78CFED;
+	border-bottom:5px solid #78CFED;
+}
+.feature-divider{
+	border-top:1px dashed #BDE0EC;
+	margin-top: 0px;
+	width:990px;
+}
+
+#content{
+	width:80%;
+	min-width:780px;
+	margin:0 auto;
+	margin-top:60px;
+	margin-left: 116px;
+}
+
+
+
+/*璐﹀彿璁剧疆*/
+#myTab1{
+	width:85%;
+	float: left;
+}
+.nav-tabs{
+	border-bottom: none;
+}
+.nav-tabs li{
+	line-height: 35px;
+	border:1px solid #ddd;
+	border-radius: 5px;
+	border-bottom:none; 
+}
+.nav-tabs>li>a{
+	margin-right:0px;
+}
+.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover,.nav-tabs>li.active>a:focus{
+	color:#78CFED;
+	font-size: 16px;
+	border-bottom:none; 
+}
+.nav-tabs a,.nav-tabs a:hover{
+	color:#999;
+	font-size: 16px;
+}
+.form-horizontal{
+	border:1px solid #ddd;
+	margin-top: 44px;
+	margin-bottom:20px;
+	z-index: 10;
+}
+.form-horizontal .form-group{
+	/*margin-right: 0px;*/
+	/*margin-top: 50px;*/
+	margin-bottom: 40px;
+}
+#alterpassword .form-horizontal .form-group{
+	margin-top: 50px;
+}
+#basicinfo .form-horizontal .form-group:nth-child(1){
+	/*margin-right: 0px;*/
+	margin-top: 50px;
+	margin-bottom: 90px;
+}
+/*鏇存敼澶村儚*/
+#editAvatar{
+	width:100px;
+	height: 100px;
+	position: relative;
+	border-radius: 5px;
+	background-color: white;
+}
+#mypic{
+	position: absolute;
+	top:20%;
+	left:25%;
+	width: 100px;
+	height: 100px;
+	
+}
+#mypic img{
+	width:100px;
+	height:100px;
+	z-index: 20;
+}
+#mypic:hover,#mypic:focus{
+	/*box-shadow: 0 0 40px red;*/
+}
+#editText{
+	position: absolute;
+	width:80px;
+	height: 30px;
+	top:130px;
+	left: 35%;
+	line-height: 30px;
+	color:white;
+	text-align: center;
+	background-color: grey;	
+}
+#editText:hover{
+	text-shadow: 0 0 10px #46A3FF;	
+	box-shadow:  0 0 5px 	#66B3FF;
+}
+.infotitle{
+	position: relative;
+	margin-left:13%;
+}
+.infotitle img{
+	width:100%;
+}
+.infotitle div{
+	position: absolute;
+	top:15%;
+	left: 25%;
+	font-size: 18px;
+	color:white;
+}
+.infobtn{
+	margin:0 auto;
+	text-align: center;
+}
+.infobtn .btn{
+	width:100px;
+}
+
+/*寮瑰嚭妗�*/
+#infocontent,#passcontent{
+	font-size:20px;
+	text-align: center;
+	margin-top: 20px;
+	color:black;
+}
+.modal-footer,.modal-header{
+	border-top: none;
+	border-bottom: none;
+}
+
+
+
+/*鎴戠殑娲诲姩*/
+.activityabstract{
+	display: none;
+}
+.activityabstract .table a{
+	color:black;
+}
+
+#publishtitle1{
+	position: absolute;
+	top:30%;
+	left:280px;
+	color:white;
+	display:none;
+	min-width: 510px;
+}
+#publishactivity{
+	position: absolute;
+	top:50%;
+	left:400px;
+	color:white;
+	font-weight: bold;
+	background-color: transparent;
+	border:2px solid white;
+	width:200px;
+	display: none;
+}
+.activityabstract #myTab2{
+	width:85%;
+	float: left;
+}
+.activityabstract .nav-pills li{
+	line-height: 35px;
+}
+.activityabstract .nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{
+	background-color: #78CFED;
+	color:white;
+	font-size: 16px;
+
+}
+.activityabstract .nav-pills a,.nav-pills a:hover{
+	color:black;
+	font-size: 16px;
+}
+.activityabstract #dropdown{
+	float: left;
+	padding-top: 5px;
+}
+.activityabstract .table{
+	text-align: center;
+}
+.activityabstract .table th{
+	font-size: 18px;
+	text-align: center;
+}
+.activityabstract .table td{
+	font-size: 16px;
+}
+.activityabstract .table>tbody>tr>td{
+	vertical-align: middle;
+}
+.activityabstract #page{
+	text-align: center;
+}
+
+
+/*鎴戠殑娓歌*/
+.travelnotes{
+	display: none;
+}
+#publishtitle2{
+	position: absolute;
+	top:20%;
+	left:250px;
+	color:white;
+	line-height: 70px;
+	display: none;
+	min-width: 510px;
+}
+#publishnote{
+	position: absolute;
+	top:50%;
+	left:400px;
+	color:white;
+	font-weight: bold;
+	background-color: transparent;
+	border:2px solid white;
+	width:200px;
+	display: none;
+}
+@media (max-width: 768px){
+	.navbar-form .form-group{
+		display: inline-block;
+	}
+}
+.travelnotes .notepanel{
+	margin-bottom:250px;
+}
+.travelnotes .panel-heading{
+	padding-bottom: 12.5px;
+	border-bottom: none;
+}
+.travelnotes #travelnotetitle,#travelnotetime{
+	font-size: 16px;
+	margin-top: 8px;
+}
+.travelnotes #travelnotetitle a{
+	color:#31708f;
+}
+.travelnotes #travelnotetitle a:hover{
+	color:#38BAE6;
+}
+.travelnotes #travelnotebody{
+	border:1px solid #bce8f1;
+	border-top:none;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	color:#666666;
+	/*max-height: 185px;*/
+}
+.travelnotes #notecontent{
+	line-height: 35px;
+	max-height: 175px;
+	overflow: hidden;
+}
+.travelnotes #notepic{
+	float: right;
+}
+.travelnotes #notepic img{
+	width:100%;
+}
+.travelnotes #page{
+	text-align: center;
+}
+@media screen and (max-width:1366px) and (min-width: 1025px){
+	.travelnotes .notepanel{
+		margin-bottom:250px;
+	}
+	.travelnotes #publishactivity{
+		top:60%;
+	}
+	.travelnotes #publishtitle{
+		top:25%;
+	}
+	.infotitle div{
+		top:20%;
+		left:30%;
+	}
+}
+@media screen and (max-width:1085px) and (min-width: 1025px){
+	.travelnotes #notecontent{
+		line-height: 35px;
+		max-height: 150px;
+		overflow: hidden;
+	}
+}

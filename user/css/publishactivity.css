@@ -1,0 +1,235 @@
+*{
+	font-family: 微软雅黑;
+}
+textarea{ resize : none; } 
+#returnactivity{
+	position: absolute;
+	top:10%;
+	left:3%;
+	color:white;
+	font-weight: bold;
+	background-color: transparent;
+	border:2px solid white;
+	width:100px;
+}
+#title{
+	margin-left: 10%;
+	margin-top:50px;
+}
+#title h2{
+	font-size: 24px;
+}
+.form-horizontal{
+	margin-top: 30px;
+	padding-left: 4%;
+}
+.form-horizontal .form-group{
+	margin-right: 0px;
+	margin-bottom: 30px;
+}
+#label2{
+	text-align: center;
+}
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.choosebox{
+	padding:3px 0 0 13px;
+}
+.choosebox li{
+	float:left;
+	margin-right:10px;
+	display:inline;
+	width:10%;
+	height: 40px;
+	margin-bottom:10px;
+}
+.choosebox li a{
+	float:left;
+	background:#fff;
+	font-size:14px;
+	border:1px solid #ccc;
+	height:40px;
+	line-height:40px;
+	text-align: center;
+	display:block;
+	color:#666666;
+	border-radius: 5px;
+}
+.choosebox li a.current{
+	border:1px solid #0066FF;
+	opacity: 0.5;
+	color:#0066FF;
+}
+.choosebox li input{
+	display:none;
+}
+.clearfix .size_radioToggle{
+	width:100%;
+	height:100%;
+	border:1px solid #CCCCCC;
+}
+.clearfix .size_checkboxToggle{
+	width:100%;
+	height:100%;
+	border:1px solid #CCCCCC;
+}
+.activitydetail{
+	margin-bottom: 30px;
+}
+#activitydetail{
+	height: 360px;
+	border:1px solid #CCCCCC;
+	border-radius: 5px;
+}
+#activitydetail input{
+	height: 15px;
+	margin-top: 15px;
+}
+.choosetext{
+	display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#detailfirst{
+	margin-left:2px;
+}
+#add-schedule,#del-schedule{
+	text-align: center;
+}
+#del-schedule{
+	margin-top: 20px;
+}
+#add-schedule{
+	margin-top:5px;
+}
+.previous1,.previous2{
+	margin-right: 200px;
+}
+#next1,#next2,#complete{
+	text-align: center;
+	margin-top:50px;
+	margin-bottom: 20px;
+}
+#next1 button,#next2 button,#complete button{
+	width:100px;
+}
+#form2,#form3{
+	display: none;
+}
+#safeitem input,#activitytips input,#applyitem input{
+	margin-bottom: 10px;
+}
+#form3 label{
+	text-align: left;
+	margin-left: 5%;
+}
+
+/*图片上传*/
+#editAvatar{
+	height: 80px;
+	position: relative;
+}
+#mypic{
+	position: absolute;
+	width: 100px;
+	height: 90px;
+	/*background:url(../images/default-avatar.jpg) no-repeat 0px 0px;*/
+}
+#mypic img{
+	width:100%;
+	z-index: 20;
+}
+#mypic:hover,#mypic:focus{
+	/*box-shadow: 0 0 40px red;*/
+}
+#plus{
+	 color:white;
+	 text-align: center;
+	 font-size:50px;
+	 position: absolute;
+	 left:5%;
+	 text-shadow: 0 0 10px #46A3FF;
+}
+#plus:hover{
+	text-shadow: 0 0 30px 	#0072E3;
+}
+#editText{
+	position: absolute;
+	width:60px;
+	height: 20px;
+	top:90px;
+	left: 15%;
+	color:white;
+	text-align: center;
+	background-color: grey;	
+}
+#editText:hover{
+	text-shadow: 0 0 10px #46A3FF;	
+	box-shadow:  0 0 5px 	#66B3FF;
+}
+#alertcontent{
+	font-size:20px;
+	text-align: center;
+	margin-top: 20px;
+}
+.modal-footer,.modal-header{
+	border-top: none;
+	border-bottom: none;
+}
+
+/*活动简介，活动细则的图片上传*/
+#introeditAvatar,#itemeditAvatar{
+	width:75%;
+	height: 80px;
+	position: relative;
+	border-radius: 5px;
+	background-color: white;
+}
+#intromypic,#itemmypic{
+	position: absolute;
+	top:20%;
+	left:25%;
+	width: 30%;
+	/*background:url(../images/default-avatar.jpg) no-repeat 0px 0px;*/
+}
+#intromypic img,#itemmypic img{
+	width:100%;
+	z-index: 20;
+}
+#intromypic:hover,#intromypic:focus{
+	/*box-shadow: 0 0 40px red;*/
+}
+#introeditText,#itemeditText{
+	position: absolute;
+	width:80px;
+	height: 30px;
+	top:30px;
+	left: 20%;
+	line-height: 30px;
+	color:white;
+	text-align: center;
+	background-color: grey;	
+}
+#introeditText:hover,#itemeditText:hover{
+	text-shadow: 0 0 10px #46A3FF;	
+	box-shadow:  0 0 5px 	#66B3FF;
+}
+@media screen and (max-width:1366px) and (min-width: 1025px){
+	.col-md-7{
+		width:40%;
+	}
+	.datediv{
+		width:16%;
+	}
+}
+.form-horizontal .form-group-lg .control-label{
+	font-weight: normal;
+}

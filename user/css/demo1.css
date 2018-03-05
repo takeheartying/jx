@@ -1,0 +1,68 @@
+
+ul, li,fieldset, form,section{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+section{
+	display: block;
+}
+
+/* --- DEMO STYLES --- */
+
+section{
+	position: relative;
+	font-size: 0.1px;
+	text-align: justify;
+}
+
+section:after{
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+section .wrapper{
+	padding: 30px;
+}
+
+section h3{
+	font-size: 20px;
+	margin-bottom: 1em;
+	padding-top: .5em;
+}
+
+section h4{
+	font-size: 18px;
+	margin-bottom: 1em;
+	font-weight: 300;
+}
+
+.col{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+.col_1{
+	width: 55%;
+}
+
+
+
+select,
+.dropdown{
+	display: inline-block;
+}
+
+.dropdown{
+	margin-right: 8px;
+}
+
+
+/* --- DEMO METRO THEME --- */
+
+/* PREFIXED CSS */
